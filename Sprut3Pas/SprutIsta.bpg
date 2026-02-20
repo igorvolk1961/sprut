@@ -1,0 +1,59 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = DMServerLib.dll SpatialModelLib.dll PainterLib.dll Sgdb.dll \
+  FacilityModelLib.dll FMDocumentLib.dll SafeguardAnalyzerLib.dll \
+  SafeguardSynthesisLib.dll BattleModelLib.dll SectorBuilderLib.dll \
+  AutoCadExp.dll AutoVisio.dll Spruter.exe
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+Spruter.exe: Spruter.dpr
+  $(DCC)
+
+FacilityModelLib.dll: FacilityModel\FacilityModelLib.dpr
+  $(DCC)
+
+FMDocumentLib.dll: FMDocument\FMDocumentLib.dpr
+  $(DCC)
+
+DMServerLib.dll: ..\..\AutoDM\AutoDMPas\DMServer\DMServerLib.dpr
+  $(DCC)
+
+SpatialModelLib.dll: ..\..\AutoDM\AutoDMPas\SpatialModel\SpatialModelLib.dpr
+  $(DCC)
+
+SafeguardAnalyzerLib.dll: SafeguardAnalyzer\SafeguardAnalyzerLib.dpr
+  $(DCC)
+
+SafeguardSynthesisLib.dll: SafeguardSynthesis\SafeguardSynthesisLib.dpr
+  $(DCC)
+
+AutoCadExp.dll: AutoCadExp\AutoCadExp.dpr
+  $(DCC)
+
+AutoVisio.dll: AutoVisio\AutoVisio.dpr
+  $(DCC)
+
+BattleModelLib.dll: BattleModel\BattleModelLib.dpr
+  $(DCC)
+
+SectorBuilderLib.dll: SectorBuilder\SectorBuilderLib.dpr
+  $(DCC)
+
+Sgdb.dll: SGDB\Sgdb.dpr
+  $(DCC)
+
+PainterLib.dll: ..\..\AutoDM\AutoDMPas\PainterLib\PainterLib.dpr
+  $(DCC)
+
+

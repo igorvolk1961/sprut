@@ -1,0 +1,29 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = DMServerLib.dll SpatialModelLib.dll Sgdb.dll SGDBClient.exe
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+Sgdb.dll: Sgdb.dpr
+  $(DCC)
+
+SGDBClient.exe: ..\SGDBClient.dpr
+  $(DCC)
+
+DMServerLib.dll: ..\..\..\AutoDM\AutoDMPas\DMServer\DMServerLib.dpr
+  $(DCC)
+
+SpatialModelLib.dll: ..\..\..\AutoDM\AutoDMPas\SpatialModel\SpatialModelLib.dpr
+  $(DCC)
+
+

@@ -1,0 +1,2 @@
+inherited fmDemoSprut: TfmDemoSprut
+end
