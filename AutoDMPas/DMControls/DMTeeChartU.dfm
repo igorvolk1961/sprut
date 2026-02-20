@@ -1,0 +1,263 @@
+inherited DMTeeChart: TDMTeeChart
+  Top = 146
+  Caption = 'DMTeeChart'
+  ClientWidth = 804
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel1: TPanel
+    Width = 804
+    object Splitter1: TSplitter [0]
+      Left = 639
+      Top = 1
+      Width = 5
+      Height = 55
+      Cursor = crHSplit
+      AutoSnap = False
+    end
+    object mComment: TMemo [1]
+      Left = 644
+      Top = 1
+      Width = 159
+      Height = 55
+      Align = alClient
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -15
+      Font.Name = 'Times New Roman'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+      OnChange = mCommentChange
+      OnMouseDown = mCommentMouseDown
+    end
+    inherited Panel2: TPanel
+      Width = 638
+      TabOrder = 1
+      inherited Label2: TLabel
+        Left = 295
+      end
+      object sbCopy: TSpeedButton [2]
+        Left = 560
+        Top = 22
+        Width = 23
+        Height = 22
+        Hint = #1050#1086#1087#1080#1088#1086#1074#1072#1090#1100' '#1074' '#1073#1091#1092#1077#1088' '#1086#1073#1084#1077#1085#1072
+        Glyph.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000000000000000000000000000000000000FF00FF00FF00
+          FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+          FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+          FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+          FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+          FF00FF00FF00FF00FF00FF00FF00FF00FF007F0000007F0000007F0000007F00
+          00007F0000007F0000007F0000007F0000007F000000FF00FF00FF00FF00FF00
+          FF00FF00FF00FF00FF00FF00FF00FF00FF007F000000FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF007F000000FF00FF00FF00FF00FF00
+          FF00FF00FF00FF00FF00FF00FF00FF00FF007F000000FFFFFF00000000000000
+          0000000000000000000000000000FFFFFF007F000000FF00FF00000000000000
+          0000000000000000000000000000000000007F000000FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF007F000000FF00FF0000000000FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF007F000000FFFFFF00000000000000
+          0000000000000000000000000000FFFFFF007F000000FF00FF0000000000FFFF
+          FF00000000000000000000000000000000007F000000FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF007F000000FF00FF0000000000FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF007F000000FFFFFF00000000000000
+          0000FFFFFF007F0000007F0000007F0000007F000000FF00FF0000000000FFFF
+          FF00000000000000000000000000000000007F000000FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF007F000000FFFFFF007F000000FF00FF00FF00FF0000000000FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF007F000000FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF007F0000007F000000FF00FF00FF00FF00FF00FF0000000000FFFF
+          FF000000000000000000FFFFFF00000000007F0000007F0000007F0000007F00
+          00007F0000007F000000FF00FF00FF00FF00FF00FF00FF00FF0000000000FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF0000000000FFFFFF0000000000FF00FF00FF00
+          FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF0000000000FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF000000000000000000FF00FF00FF00FF00FF00
+          FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00000000000000
+          000000000000000000000000000000000000FF00FF00FF00FF00FF00FF00FF00
+          FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+          FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+          FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00}
+        ParentShowHint = False
+        ShowHint = True
+        OnClick = sbCopyClick
+      end
+      object LabelH: TLabel [3]
+        Left = 593
+        Top = 4
+        Width = 8
+        Height = 13
+        Caption = 'H'
+      end
+      object LabelW: TLabel [4]
+        Left = 613
+        Top = 3
+        Width = 11
+        Height = 13
+        Caption = 'W'
+      end
+      inherited cbFunction: TComboBox
+        Width = 271
+      end
+      inherited cbSort: TComboBox
+        Left = 288
+        Width = 271
+      end
+      object SpinButton1: TSpinButton
+        Left = 589
+        Top = 19
+        Width = 20
+        Height = 25
+        DownGlyph.Data = {
+          0E010000424D0E01000000000000360000002800000009000000060000000100
+          200000000000D800000000000000000000000000000000000000008080000080
+          8000008080000080800000808000008080000080800000808000008080000080
+          8000008080000080800000808000000000000080800000808000008080000080
+          8000008080000080800000808000000000000000000000000000008080000080
+          8000008080000080800000808000000000000000000000000000000000000000
+          0000008080000080800000808000000000000000000000000000000000000000
+          0000000000000000000000808000008080000080800000808000008080000080
+          800000808000008080000080800000808000}
+        TabOrder = 2
+        UpGlyph.Data = {
+          0E010000424D0E01000000000000360000002800000009000000060000000100
+          200000000000D800000000000000000000000000000000000000008080000080
+          8000008080000080800000808000008080000080800000808000008080000080
+          8000000000000000000000000000000000000000000000000000000000000080
+          8000008080000080800000000000000000000000000000000000000000000080
+          8000008080000080800000808000008080000000000000000000000000000080
+          8000008080000080800000808000008080000080800000808000000000000080
+          8000008080000080800000808000008080000080800000808000008080000080
+          800000808000008080000080800000808000}
+        OnDownClick = SpinButton1DownClick
+        OnUpClick = SpinButton1UpClick
+      end
+      object SpinButton2: TSpinButton
+        Left = 611
+        Top = 19
+        Width = 20
+        Height = 25
+        DownGlyph.Data = {
+          0E010000424D0E01000000000000360000002800000009000000060000000100
+          200000000000D800000000000000000000000000000000000000008080000080
+          8000008080000080800000808000008080000080800000808000008080000080
+          8000008080000080800000808000000000000080800000808000008080000080
+          8000008080000080800000808000000000000000000000000000008080000080
+          8000008080000080800000808000000000000000000000000000000000000000
+          0000008080000080800000808000000000000000000000000000000000000000
+          0000000000000000000000808000008080000080800000808000008080000080
+          800000808000008080000080800000808000}
+        TabOrder = 3
+        UpGlyph.Data = {
+          0E010000424D0E01000000000000360000002800000009000000060000000100
+          200000000000D800000000000000000000000000000000000000008080000080
+          8000008080000080800000808000008080000080800000808000008080000080
+          8000000000000000000000000000000000000000000000000000000000000080
+          8000008080000080800000000000000000000000000000000000000000000080
+          8000008080000080800000808000008080000000000000000000000000000080
+          8000008080000080800000808000008080000080800000808000000000000080
+          8000008080000080800000808000008080000080800000808000008080000080
+          800000808000008080000080800000808000}
+        OnDownClick = SpinButton2DownClick
+        OnUpClick = SpinButton2UpClick
+      end
+    end
+  end
+  inherited ScrollBox1: TScrollBox
+    Width = 804
+    OnResize = ScrollBox1Resize
+    object Chart1: TChart
+      Left = 8
+      Top = 0
+      Width = 532
+      Height = 271
+      BackWall.Brush.Color = clWhite
+      BackWall.Brush.Style = bsClear
+      Foot.Font.Charset = RUSSIAN_CHARSET
+      Foot.Font.Color = clBlack
+      Foot.Font.Height = -15
+      Foot.Font.Name = 'Times New Roman'
+      Foot.Font.Style = []
+      Foot.Text.Strings = (
+        '')
+      MarginBottom = 0
+      MarginTop = 0
+      Title.Font.Charset = RUSSIAN_CHARSET
+      Title.Font.Color = clBlack
+      Title.Font.Height = -11
+      Title.Font.Name = 'Arial'
+      Title.Font.Style = []
+      Title.Text.Strings = (
+        '')
+      OnClickAxis = Chart1ClickAxis
+      OnClickSeries = Chart1ClickSeries
+      BottomAxis.LabelsFont.Charset = RUSSIAN_CHARSET
+      BottomAxis.LabelsFont.Color = clBlack
+      BottomAxis.LabelsFont.Height = -19
+      BottomAxis.LabelsFont.Name = 'Times New Roman'
+      BottomAxis.LabelsFont.Style = []
+      BottomAxis.TickLength = 0
+      BottomAxis.Title.Font.Charset = RUSSIAN_CHARSET
+      BottomAxis.Title.Font.Color = clBlack
+      BottomAxis.Title.Font.Height = -11
+      BottomAxis.Title.Font.Name = 'Times New Roman'
+      BottomAxis.Title.Font.Style = []
+      LeftAxis.LabelsFont.Charset = RUSSIAN_CHARSET
+      LeftAxis.LabelsFont.Color = clBlack
+      LeftAxis.LabelsFont.Height = -19
+      LeftAxis.LabelsFont.Name = 'Times New Roman'
+      LeftAxis.LabelsFont.Style = []
+      LeftAxis.LabelsSeparation = 0
+      LeftAxis.LabelsSize = 50
+      LeftAxis.TickLength = 5
+      LeftAxis.Title.Font.Charset = RUSSIAN_CHARSET
+      LeftAxis.Title.Font.Color = clBlack
+      LeftAxis.Title.Font.Height = -11
+      LeftAxis.Title.Font.Name = 'MS Sans Serif'
+      LeftAxis.Title.Font.Style = []
+      Legend.Font.Charset = RUSSIAN_CHARSET
+      Legend.Font.Color = clBlack
+      Legend.Font.Height = -11
+      Legend.Font.Name = 'MS Sans Serif'
+      Legend.Font.Style = []
+      Legend.Visible = False
+      TopAxis.LabelsFont.Charset = DEFAULT_CHARSET
+      TopAxis.LabelsFont.Color = clBlack
+      TopAxis.LabelsFont.Height = -19
+      TopAxis.LabelsFont.Name = 'Arial'
+      TopAxis.LabelsFont.Style = []
+      OnGetAxisLabel = Chart1GetAxisLabel
+      Color = clWindow
+      TabOrder = 0
+      object Series1: THorizBarSeries
+        Marks.ArrowLength = 20
+        Marks.Font.Charset = RUSSIAN_CHARSET
+        Marks.Font.Color = clBlack
+        Marks.Font.Height = -19
+        Marks.Font.Name = 'Times New Roman'
+        Marks.Font.Style = []
+        Marks.Style = smsValue
+        Marks.Visible = True
+        SeriesColor = clRed
+        XValues.DateTime = False
+        XValues.Name = 'Bar'
+        XValues.Multiplier = 1
+        XValues.Order = loNone
+        YValues.DateTime = False
+        YValues.Name = 'Y'
+        YValues.Multiplier = 1
+        YValues.Order = loNone
+      end
+    end
+  end
+  object FontDialog1: TFontDialog
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    MinFontSize = 0
+    MaxFontSize = 0
+    Left = 552
+    Top = 64
+  end
+end
